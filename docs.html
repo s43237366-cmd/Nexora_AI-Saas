@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nexora developer documentation.">
+<title>Docs — Nexora Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+</head>
+<body><div class="bg-grid"></div><div class="noise"></div>
+<header class="site-header"><a class="logo" href="index.html"><span class="logo-mark">N</span><span>NEXORA<span class="logo-dot">.</span></span></a><button class="mobile-menu" aria-label="Open menu"><span></span><span></span></button><nav class="nav"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a class="active" href="docs.html">Docs</a><a href="faq.html">FAQ</a></nav><button class="theme-toggle" aria-label="Toggle light and dark mode" title="Light / Dark mode"><span class="theme-icon">☀</span><span class="theme-text">Light</span></button><a class="header-cta" href="pricing.html">Start building <span>↗</span></a></header>
+
+<main>
+<section class="page-hero section docs-hero"><div class="eyebrow">DEVELOPER DOCUMENTATION</div><h1>Build with<br><span class="gradient-text">Nexora Core.</span></h1><p>A minimal API surface for embedding AI coding intelligence into your internal tools and workflows.</p></section>
+<section class="section docs-layout">
+<aside class="docs-sidebar"><a class="selected" href="#quickstart">Quickstart</a><a href="#authentication">Authentication</a><a href="#agents">Agents</a><a href="#context">Context API</a><a href="#errors">Errors</a></aside>
+<div class="docs-content">
+<section id="quickstart"><div class="eyebrow">01 / QUICKSTART</div><h2>Install the SDK.</h2><p>Initialize a Nexora client and send your first coding task in less than a minute.</p><div class="doc-code"><div class="doc-top">terminal <button class="copy-code" data-copy="npm install @nexora/core">COPY</button></div><pre><code><span class="cmd">$</span> npm install @nexora/core</code></pre></div><div class="doc-code"><div class="doc-top">index.ts <button class="copy-code" data-copy="import { Nexora } from '@nexora/core';">COPY</button></div><pre><code><span class="kw">import</span> { Nexora } <span class="kw">from</span> <span class="str">'@nexora/core'</span>;
+
+<span class="kw">const</span> nx = <span class="kw">new</span> Nexora({
+  apiKey: process.env.NEXORA_KEY
+});
+
+<span class="kw">const</span> result = <span class="kw">await</span> nx.agent.run({
+  task: <span class="str">'Add retry logic to checkout'</span>,
+  context: <span class="str">'./src'</span>
+});</code></pre></div></section>
+<section id="authentication" class="doc-section"><div class="eyebrow">02 / AUTHENTICATION</div><h2>One key. Full control.</h2><p>Use environment variables for server-side API keys. Never expose secret keys in browser code.</p></section>
+<section id="agents" class="doc-section"><div class="eyebrow">03 / AGENTS</div><h2>Delegate the repetitive work.</h2><p>Agents can inspect files, create patches, run tests and return a reviewable change set.</p></section>
+<section id="context" class="doc-section"><div class="eyebrow">04 / CONTEXT API</div><h2>Give the model the right context.</h2><p>Attach repository paths, architecture notes and relevant documents to improve generation quality.</p></section>
+<section id="errors" class="doc-section"><div class="eyebrow">05 / ERRORS</div><h2>Designed for debuggability.</h2><p>Structured error codes and trace IDs make failures easy to identify in production.</p></section>
+</div></section>
+</main>
+<footer class="footer"><div class="footer-main"><a class="logo" href="index.html"><span class="logo-mark">N</span><span>NEXORA<span class="logo-dot">.</span></span></a><p>AI-native infrastructure for modern engineering teams.</p></div><div class="footer-links"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="docs.html">Documentation</a><a href="faq.html">FAQ</a></div><div class="footer-bottom"><span>© 2026 Nexora Labs. Demo product.</span><span>Built for the future.</span></div></footer>
+<script src="js/app.js"></script></body></html>
